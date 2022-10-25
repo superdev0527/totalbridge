@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  right: -20px;
+  overflow-x: hidden;
+}
+#root,body,html{
+  width: calc(100% + 20px);
+  height: fit-content;
+  background: radial-gradient(circle at 0 60%,rgba(255,239,131,.5),transparent 50%),radial-gradient(circle at 70% -80%,rgba(122,229,205,.5),transparent 60%),radial-gradient(circle at 140% 80%,rgba(140,134,245,.5),transparent 50%),radial-gradient(circle at 50% 100%,rgba(255,239,131,.5),transparent 60%),radial-gradient(circle at 0 100%,rgba(199,255,242,.8) 10%,transparent 20%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  src: url('/src/assets/fonts/Gilroy/Gilroy-ExtraBold.otf');
+}
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('/src/assets/fonts/Gilroy/Gilroy-Light.otf');
+}

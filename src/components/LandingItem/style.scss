@@ -1,0 +1,36 @@
+.itemactive{
+    background-color: white;
+    border-radius: 8px;
+}
+.iteminactive{
+    margin : 12px 0px;
+    background-color: hsla(0,0%,100%,.5);
+    border-radius: 8px;
+}
+.title{
+    font-size: 28px;
+    display: flex;
+    padding : 32px;
+}
+.circlenumber{
+    margin-right: 16px;
+    width : 32px;
+    height : 32px;
+    border : 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size : 20px
+}
+@media screen and (max-width: 800px) {
+    .title{
+        font-size: 14px!important;
+        padding: 24px 16px!important;
+    }
+    .circlenumber{
+        font-size: 15px!important;
+        width: 16px;
+        height: 16px;
+    }
+  }

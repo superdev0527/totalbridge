@@ -1,0 +1,765 @@
+{
+  "contractName": "TokenEth",
+  "abi": [
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "name",
+			"outputs": [
+				{
+					"name": "",
+					"type": "string"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "spender",
+					"type": "address"
+				},
+				{
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "approve",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "totalSupply",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "sender",
+					"type": "address"
+				},
+				{
+					"name": "recipient",
+					"type": "address"
+				},
+				{
+					"name": "amount",
+					"type": "uint256"
+				}
+			],
+			"name": "transferFrom",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "decimals",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint8"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "spender",
+					"type": "address"
+				},
+				{
+					"name": "addedValue",
+					"type": "uint256"
+				}
+			],
+			"name": "increaseAllowance",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "burn",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "account",
+					"type": "address"
+				}
+			],
+			"name": "balanceOf",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}                                 
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "symbol",
+			"outputs": [
+				{
+					"name": "",
+					"type": "string"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "spender",
+					"type": "address"
+				},
+				{
+					"name": "subtractedValue",
+					"type": "uint256"
+				}
+			],
+			"name": "decreaseAllowance",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [
+				{
+					"name": "recipient",
+					"type": "address"
+				},
+				{
+					"name": "amount",
+					"type": "uint256"
+				}
+			],
+			"name": "transfer",
+			"outputs": [
+				{
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "owner",
+					"type": "address"
+				},
+				{
+					"name": "spender",
+					"type": "address"
+				}
+			],
+			"name": "allowance",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"name": "name",
+					"type": "string"
+				},
+				{
+					"name": "symbol",
+					"type": "string"
+				},
+				{
+					"name": "decimals",
+					"type": "uint8"
+				},
+				{
+					"name": "totalSupply",
+					"type": "uint256"
+				},
+				{
+					"name": "feeReceiver",
+					"type": "address"
+				},
+				{
+					"name": "tokenOwnerAddress",
+					"type": "address"
+				}
+			],
+			"payable": true,
+			"stateMutability": "payable",
+			"type": "constructor"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"name": "from",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"name": "to",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "Transfer",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"name": "owner",
+					"type": "address"
+				},
+				{
+					"indexed": true,
+					"name": "spender",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "Approval",
+			"type": "event"
+		}
+	],
+  "sourceMap": "96:92:11:-:0;;;132:53;;;;;;;;;;186:105:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;246:4;252:6;1980:5:0;1972;:13;;;;;;;;;;;;:::i;:::-;;2005:7;1995;:17;;;;;;;;;;;;:::i;:::-;;1906:113;;275:10:9::1;267:5;;:18;;;;;;;;;;;;;;;;;;186:105:::0;;96:92:11;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;7:320:12:-;;88:1;82:4;78:12;68:22;;135:1;129:4;125:12;156:18;146:2;;212:4;204:6;200:17;190:27;;146:2;274;266:6;263:14;243:18;240:38;237:2;;;293:18;;:::i;:::-;237:2;58:269;;;;:::o;333:180::-;381:77;378:1;371:88;478:4;475:1;468:15;502:4;499:1;492:15;96:92:11;;;;;;;",
+  "deployedSourceMap": "96:92:11:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2084:98:0;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;4181:166;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;3172:106;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;4814:478;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;3021:91;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;5687:212;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;433:127:9;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;3336:125:0;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2295:102;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;6386:405;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;3664:172;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;3894:149;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;297:126:9;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;159:20;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2084:98:0;2138:13;2170:5;2163:12;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2084:98;:::o;4181:166::-;4264:4;4280:39;4289:12;:10;:12::i;:::-;4303:7;4312:6;4280:8;:39::i;:::-;4336:4;4329:11;;4181:166;;;;:::o;3172:106::-;3233:7;3259:12;;3252:19;;3172:106;:::o;4814:478::-;4950:4;4966:36;4976:6;4984:9;4995:6;4966:9;:36::i;:::-;5013:24;5040:11;:19;5052:6;5040:19;;;;;;;;;;;;;;;:33;5060:12;:10;:12::i;:::-;5040:33;;;;;;;;;;;;;;;;5013:60;;5111:6;5091:16;:26;;5083:79;;;;;;;;;;;;:::i;:::-;;;;;;;;;5196:57;5205:6;5213:12;:10;:12::i;:::-;5246:6;5227:16;:25;5196:8;:57::i;:::-;5281:4;5274:11;;;4814:478;;;;;:::o;3021:91::-;3079:5;3103:2;3096:9;;3021:91;:::o;5687:212::-;5775:4;5791:80;5800:12;:10;:12::i;:::-;5814:7;5860:10;5823:11;:25;5835:12;:10;:12::i;:::-;5823:25;;;;;;;;;;;;;;;:34;5849:7;5823:34;;;;;;;;;;;;;;;;:47;;;;:::i;:::-;5791:8;:80::i;:::-;5888:4;5881:11;;5687:212;;;;:::o;433:127:9:-;510:5;;;;;;;;;;;496:19;;:10;:19;;;488:42;;;;;;;;;;;;:::i;:::-;;;;;;;;;537:17;543:2;547:6;537:5;:17::i;:::-;433:127;;:::o;3336:125:0:-;3410:7;3436:9;:18;3446:7;3436:18;;;;;;;;;;;;;;;;3429:25;;3336:125;;;:::o;2295:102::-;2351:13;2383:7;2376:14;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2295:102;:::o;6386:405::-;6479:4;6495:24;6522:11;:25;6534:12;:10;:12::i;:::-;6522:25;;;;;;;;;;;;;;;:34;6548:7;6522:34;;;;;;;;;;;;;;;;6495:61;;6594:15;6574:16;:35;;6566:85;;;;;;;;;;;;:::i;:::-;;;;;;;;;6685:67;6694:12;:10;:12::i;:::-;6708:7;6736:15;6717:16;:34;6685:8;:67::i;:::-;6780:4;6773:11;;;6386:405;;;;:::o;3664:172::-;3750:4;3766:42;3776:12;:10;:12::i;:::-;3790:9;3801:6;3766:9;:42::i;:::-;3825:4;3818:11;;3664:172;;;;:::o;3894:149::-;3983:7;4009:11;:18;4021:5;4009:18;;;;;;;;;;;;;;;:27;4028:7;4009:27;;;;;;;;;;;;;;;;4002:34;;3894:149;;;;:::o;297:126:9:-;374:5;;;;;;;;;;;360:19;;:10;:19;;;352:42;;;;;;;;;;;;:::i;:::-;;;;;;;;;409:8;401:5;;:16;;;;;;;;;;;;;;;;;;297:126;:::o;159:20::-;;;;;;;;;;;;;:::o;587:96:3:-;640:7;666:10;659:17;;587:96;:::o;9962:370:0:-;10110:1;10093:19;;:5;:19;;;;10085:68;;;;;;;;;;;;:::i;:::-;;;;;;;;;10190:1;10171:21;;:7;:21;;;;10163:68;;;;;;;;;;;;:::i;:::-;;;;;;;;;10272:6;10242:11;:18;10254:5;10242:18;;;;;;;;;;;;;;;:27;10261:7;10242:27;;;;;;;;;;;;;;;:36;;;;10309:7;10293:32;;10302:5;10293:32;;;10318:6;10293:32;;;;;;:::i;:::-;;;;;;;;9962:370;;;:::o;7265:713::-;7418:1;7400:20;;:6;:20;;;;7392:70;;;;;;;;;;;;:::i;:::-;;;;;;;;;7501:1;7480:23;;:9;:23;;;;7472:71;;;;;;;;;;;;:::i;:::-;;;;;;;;;7554:47;7575:6;7583:9;7594:6;7554:20;:47::i;:::-;7612:21;7636:9;:17;7646:6;7636:17;;;;;;;;;;;;;;;;7612:41;;7688:6;7671:13;:23;;7663:74;;;;;;;;;;;;:::i;:::-;;;;;;;;;7807:6;7791:13;:22;7771:9;:17;7781:6;7771:17;;;;;;;;;;;;;;;:42;;;;7857:6;7833:9;:20;7843:9;7833:20;;;;;;;;;;;;;;;;:30;;;;;;;:::i;:::-;;;;;;;;7896:9;7879:35;;7888:6;7879:35;;;7907:6;7879:35;;;;;;:::i;:::-;;;;;;;;7925:46;7945:6;7953:9;7964:6;7925:19;:46::i;:::-;7265:713;;;;:::o;8254:389::-;8356:1;8337:21;;:7;:21;;;;8329:65;;;;;;;;;;;;:::i;:::-;;;;;;;;;8405:49;8434:1;8438:7;8447:6;8405:20;:49::i;:::-;8481:6;8465:12;;:22;;;;;;;:::i;:::-;;;;;;;;8519:6;8497:9;:18;8507:7;8497:18;;;;;;;;;;;;;;;;:28;;;;;;;:::i;:::-;;;;;;;;8561:7;8540:37;;8557:1;8540:37;;;8570:6;8540:37;;;;;;:::i;:::-;;;;;;;;8588:48;8616:1;8620:7;8629:6;8588:19;:48::i;:::-;8254:389;;:::o;10916:121::-;;;;:::o;11625:120::-;;;;:::o;7:139:12:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:139::-;;236:6;223:20;214:29;;252:33;279:5;252:33;:::i;:::-;204:87;;;;:::o;297:262::-;;405:2;393:9;384:7;380:23;376:32;373:2;;;421:1;418;411:12;373:2;464:1;489:53;534:7;525:6;514:9;510:22;489:53;:::i;:::-;479:63;;435:117;363:196;;;;:::o;565:407::-;;;690:2;678:9;669:7;665:23;661:32;658:2;;;706:1;703;696:12;658:2;749:1;774:53;819:7;810:6;799:9;795:22;774:53;:::i;:::-;764:63;;720:117;876:2;902:53;947:7;938:6;927:9;923:22;902:53;:::i;:::-;892:63;;847:118;648:324;;;;;:::o;978:552::-;;;;1120:2;1108:9;1099:7;1095:23;1091:32;1088:2;;;1136:1;1133;1126:12;1088:2;1179:1;1204:53;1249:7;1240:6;1229:9;1225:22;1204:53;:::i;:::-;1194:63;;1150:117;1306:2;1332:53;1377:7;1368:6;1357:9;1353:22;1332:53;:::i;:::-;1322:63;;1277:118;1434:2;1460:53;1505:7;1496:6;1485:9;1481:22;1460:53;:::i;:::-;1450:63;;1405:118;1078:452;;;;;:::o;1536:407::-;;;1661:2;1649:9;1640:7;1636:23;1632:32;1629:2;;;1677:1;1674;1667:12;1629:2;1720:1;1745:53;1790:7;1781:6;1770:9;1766:22;1745:53;:::i;:::-;1735:63;;1691:117;1847:2;1873:53;1918:7;1909:6;1898:9;1894:22;1873:53;:::i;:::-;1863:63;;1818:118;1619:324;;;;;:::o;1949:118::-;2036:24;2054:5;2036:24;:::i;:::-;2031:3;2024:37;2014:53;;:::o;2073:109::-;2154:21;2169:5;2154:21;:::i;:::-;2149:3;2142:34;2132:50;;:::o;2188:364::-;;2304:39;2337:5;2304:39;:::i;:::-;2359:71;2423:6;2418:3;2359:71;:::i;:::-;2352:78;;2439:52;2484:6;2479:3;2472:4;2465:5;2461:16;2439:52;:::i;:::-;2516:29;2538:6;2516:29;:::i;:::-;2511:3;2507:39;2500:46;;2280:272;;;;;:::o;2558:367::-;;2721:67;2785:2;2780:3;2721:67;:::i;:::-;2714:74;;2818:34;2814:1;2809:3;2805:11;2798:55;2884:5;2879:2;2874:3;2870:12;2863:27;2916:2;2911:3;2907:12;2900:19;;2704:221;;;:::o;2931:366::-;;3094:67;3158:2;3153:3;3094:67;:::i;:::-;3087:74;;3191:34;3187:1;3182:3;3178:11;3171:55;3257:4;3252:2;3247:3;3243:12;3236:26;3288:2;3283:3;3279:12;3272:19;;3077:220;;;:::o;3303:370::-;;3466:67;3530:2;3525:3;3466:67;:::i;:::-;3459:74;;3563:34;3559:1;3554:3;3550:11;3543:55;3629:8;3624:2;3619:3;3615:12;3608:30;3664:2;3659:3;3655:12;3648:19;;3449:224;;;:::o;3679:308::-;;3842:67;3906:2;3901:3;3842:67;:::i;:::-;3835:74;;3939:12;3935:1;3930:3;3926:11;3919:33;3978:2;3973:3;3969:12;3962:19;;3825:162;;;:::o;3993:372::-;;4156:67;4220:2;4215:3;4156:67;:::i;:::-;4149:74;;4253:34;4249:1;4244:3;4240:11;4233:55;4319:10;4314:2;4309:3;4305:12;4298:32;4356:2;4351:3;4347:12;4340:19;;4139:226;;;:::o;4371:369::-;;4534:67;4598:2;4593:3;4534:67;:::i;:::-;4527:74;;4631:34;4627:1;4622:3;4618:11;4611:55;4697:7;4692:2;4687:3;4683:12;4676:29;4731:2;4726:3;4722:12;4715:19;;4517:223;;;:::o;4746:368::-;;4909:67;4973:2;4968:3;4909:67;:::i;:::-;4902:74;;5006:34;5002:1;4997:3;4993:11;4986:55;5072:6;5067:2;5062:3;5058:12;5051:28;5105:2;5100:3;5096:12;5089:19;;4892:222;;;:::o;5120:369::-;;5283:67;5347:2;5342:3;5283:67;:::i;:::-;5276:74;;5380:34;5376:1;5371:3;5367:11;5360:55;5446:7;5441:2;5436:3;5432:12;5425:29;5480:2;5475:3;5471:12;5464:19;;5266:223;;;:::o;5495:329::-;;5658:67;5722:2;5717:3;5658:67;:::i;:::-;5651:74;;5755:33;5751:1;5746:3;5742:11;5735:54;5815:2;5810:3;5806:12;5799:19;;5641:183;;;:::o;5830:118::-;5917:24;5935:5;5917:24;:::i;:::-;5912:3;5905:37;5895:53;;:::o;5954:112::-;6037:22;6053:5;6037:22;:::i;:::-;6032:3;6025:35;6015:51;;:::o;6072:222::-;;6203:2;6192:9;6188:18;6180:26;;6216:71;6284:1;6273:9;6269:17;6260:6;6216:71;:::i;:::-;6170:124;;;;:::o;6300:210::-;;6425:2;6414:9;6410:18;6402:26;;6438:65;6500:1;6489:9;6485:17;6476:6;6438:65;:::i;:::-;6392:118;;;;:::o;6516:313::-;;6667:2;6656:9;6652:18;6644:26;;6716:9;6710:4;6706:20;6702:1;6691:9;6687:17;6680:47;6744:78;6817:4;6808:6;6744:78;:::i;:::-;6736:86;;6634:195;;;;:::o;6835:419::-;;7039:2;7028:9;7024:18;7016:26;;7088:9;7082:4;7078:20;7074:1;7063:9;7059:17;7052:47;7116:131;7242:4;7116:131;:::i;:::-;7108:139;;7006:248;;;:::o;7260:419::-;;7464:2;7453:9;7449:18;7441:26;;7513:9;7507:4;7503:20;7499:1;7488:9;7484:17;7477:47;7541:131;7667:4;7541:131;:::i;:::-;7533:139;;7431:248;;;:::o;7685:419::-;;7889:2;7878:9;7874:18;7866:26;;7938:9;7932:4;7928:20;7924:1;7913:9;7909:17;7902:47;7966:131;8092:4;7966:131;:::i;:::-;7958:139;;7856:248;;;:::o;8110:419::-;;8314:2;8303:9;8299:18;8291:26;;8363:9;8357:4;8353:20;8349:1;8338:9;8334:17;8327:47;8391:131;8517:4;8391:131;:::i;:::-;8383:139;;8281:248;;;:::o;8535:419::-;;8739:2;8728:9;8724:18;8716:26;;8788:9;8782:4;8778:20;8774:1;8763:9;8759:17;8752:47;8816:131;8942:4;8816:131;:::i;:::-;8808:139;;8706:248;;;:::o;8960:419::-;;9164:2;9153:9;9149:18;9141:26;;9213:9;9207:4;9203:20;9199:1;9188:9;9184:17;9177:47;9241:131;9367:4;9241:131;:::i;:::-;9233:139;;9131:248;;;:::o;9385:419::-;;9589:2;9578:9;9574:18;9566:26;;9638:9;9632:4;9628:20;9624:1;9613:9;9609:17;9602:47;9666:131;9792:4;9666:131;:::i;:::-;9658:139;;9556:248;;;:::o;9810:419::-;;10014:2;10003:9;9999:18;9991:26;;10063:9;10057:4;10053:20;10049:1;10038:9;10034:17;10027:47;10091:131;10217:4;10091:131;:::i;:::-;10083:139;;9981:248;;;:::o;10235:419::-;;10439:2;10428:9;10424:18;10416:26;;10488:9;10482:4;10478:20;10474:1;10463:9;10459:17;10452:47;10516:131;10642:4;10516:131;:::i;:::-;10508:139;;10406:248;;;:::o;10660:222::-;;10791:2;10780:9;10776:18;10768:26;;10804:71;10872:1;10861:9;10857:17;10848:6;10804:71;:::i;:::-;10758:124;;;;:::o;10888:214::-;;11015:2;11004:9;11000:18;10992:26;;11028:67;11092:1;11081:9;11077:17;11068:6;11028:67;:::i;:::-;10982:120;;;;:::o;11108:99::-;;11194:5;11188:12;11178:22;;11167:40;;;:::o;11213:169::-;;11331:6;11326:3;11319:19;11371:4;11366:3;11362:14;11347:29;;11309:73;;;;:::o;11388:305::-;;11447:20;11465:1;11447:20;:::i;:::-;11442:25;;11481:20;11499:1;11481:20;:::i;:::-;11476:25;;11635:1;11567:66;11563:74;11560:1;11557:81;11554:2;;;11641:18;;:::i;:::-;11554:2;11685:1;11682;11678:9;11671:16;;11432:261;;;;:::o;11699:96::-;;11765:24;11783:5;11765:24;:::i;:::-;11754:35;;11744:51;;;:::o;11801:90::-;;11878:5;11871:13;11864:21;11853:32;;11843:48;;;:::o;11897:126::-;;11974:42;11967:5;11963:54;11952:65;;11942:81;;;:::o;12029:77::-;;12095:5;12084:16;;12074:32;;;:::o;12112:86::-;;12187:4;12180:5;12176:16;12165:27;;12155:43;;;:::o;12204:307::-;12272:1;12282:113;12296:6;12293:1;12290:13;12282:113;;;12381:1;12376:3;12372:11;12366:18;12362:1;12357:3;12353:11;12346:39;12318:2;12315:1;12311:10;12306:15;;12282:113;;;12413:6;12410:1;12407:13;12404:2;;;12493:1;12484:6;12479:3;12475:16;12468:27;12404:2;12253:258;;;;:::o;12517:320::-;;12598:1;12592:4;12588:12;12578:22;;12645:1;12639:4;12635:12;12666:18;12656:2;;12722:4;12714:6;12710:17;12700:27;;12656:2;12784;12776:6;12773:14;12753:18;12750:38;12747:2;;;12803:18;;:::i;:::-;12747:2;12568:269;;;;:::o;12843:180::-;12891:77;12888:1;12881:88;12988:4;12985:1;12978:15;13012:4;13009:1;13002:15;13029:180;13077:77;13074:1;13067:88;13174:4;13171:1;13164:15;13198:4;13195:1;13188:15;13215:102;;13307:2;13303:7;13298:2;13291:5;13287:14;13283:28;13273:38;;13263:54;;;:::o;13323:122::-;13396:24;13414:5;13396:24;:::i;:::-;13389:5;13386:35;13376:2;;13435:1;13432;13425:12;13376:2;13366:79;:::o;13451:122::-;13524:24;13542:5;13524:24;:::i;:::-;13517:5;13514:35;13504:2;;13563:1;13560;13553:12;13504:2;13494:79;:::o",
+  "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.0;\r\n\r\nimport './TokenBase.sol';\r\n\r\ncontract TokenEth is TokenBase {\r\n  constructor() TokenBase('PING ETH Token', 'EPING') {}\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Fr\\Music\\EthBSCbridge\\contracts\\TokenEth.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/TokenEth.sol",
+    "exportedSymbols": {
+      "Context": [
+        670
+      ],
+      "ERC20": [
+        545
+      ],
+      "IERC20": [
+        623
+      ],
+      "IERC20Metadata": [
+        648
+      ],
+      "TokenBase": [
+        1104
+      ],
+      "TokenEth": [
+        1132
+      ]
+    },
+    "id": 1133,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1120,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:11"
+      },
+      {
+        "absolutePath": "project:/contracts/TokenBase.sol",
+        "file": "./TokenBase.sol",
+        "id": 1121,
+        "nodeType": "ImportDirective",
+        "scope": 1133,
+        "sourceUnit": 1105,
+        "src": "67:25:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1122,
+              "name": "TokenBase",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1104,
+              "src": "117:9:11"
+            },
+            "id": 1123,
+            "nodeType": "InheritanceSpecifier",
+            "src": "117:9:11"
+          }
+        ],
+        "contractDependencies": [
+          545,
+          623,
+          648,
+          670,
+          1104
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1132,
+        "linearizedBaseContracts": [
+          1132,
+          1104,
+          545,
+          648,
+          623,
+          670
+        ],
+        "name": "TokenEth",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1130,
+              "nodeType": "Block",
+              "src": "183:2:11",
+              "statements": []
+            },
+            "id": 1131,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "hexValue": "50494e472045544820546f6b656e",
+                    "id": 1126,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "156:16:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_a0268bb852d573c3a0686c6d3f4282135eadf3ac9b226f527e9945608f47eca9",
+                      "typeString": "literal_string \"PING ETH Token\""
+                    },
+                    "value": "PING ETH Token"
+                  },
+                  {
+                    "hexValue": "4550494e47",
+                    "id": 1127,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "174:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_10f78cadcd41c4a74fab975db2ec85a3ba171ff93e24f793130466ebf0204b6c",
+                      "typeString": "literal_string \"EPING\""
+                    },
+                    "value": "EPING"
+                  }
+                ],
+                "id": 1128,
+                "modifierName": {
+                  "id": 1125,
+                  "name": "TokenBase",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1104,
+                  "src": "146:9:11"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "146:36:11"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1124,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:11"
+            },
+            "returnParameters": {
+              "id": 1129,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "183:0:11"
+            },
+            "scope": 1132,
+            "src": "132:53:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1133,
+        "src": "96:92:11"
+      }
+    ],
+    "src": "40:150:11"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/TokenEth.sol",
+    "exportedSymbols": {
+      "Context": [
+        670
+      ],
+      "ERC20": [
+        545
+      ],
+      "IERC20": [
+        623
+      ],
+      "IERC20Metadata": [
+        648
+      ],
+      "TokenBase": [
+        1104
+      ],
+      "TokenEth": [
+        1132
+      ]
+    },
+    "id": 1133,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1120,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:23:11"
+      },
+      {
+        "absolutePath": "project:/contracts/TokenBase.sol",
+        "file": "./TokenBase.sol",
+        "id": 1121,
+        "nodeType": "ImportDirective",
+        "scope": 1133,
+        "sourceUnit": 1105,
+        "src": "67:25:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1122,
+              "name": "TokenBase",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1104,
+              "src": "117:9:11"
+            },
+            "id": 1123,
+            "nodeType": "InheritanceSpecifier",
+            "src": "117:9:11"
+          }
+        ],
+        "contractDependencies": [
+          545,
+          623,
+          648,
+          670,
+          1104
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1132,
+        "linearizedBaseContracts": [
+          1132,
+          1104,
+          545,
+          648,
+          623,
+          670
+        ],
+        "name": "TokenEth",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1130,
+              "nodeType": "Block",
+              "src": "183:2:11",
+              "statements": []
+            },
+            "id": 1131,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "hexValue": "50494e472045544820546f6b656e",
+                    "id": 1126,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "156:16:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_a0268bb852d573c3a0686c6d3f4282135eadf3ac9b226f527e9945608f47eca9",
+                      "typeString": "literal_string \"PING ETH Token\""
+                    },
+                    "value": "PING ETH Token"
+                  },
+                  {
+                    "hexValue": "4550494e47",
+                    "id": 1127,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "174:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_10f78cadcd41c4a74fab975db2ec85a3ba171ff93e24f793130466ebf0204b6c",
+                      "typeString": "literal_string \"EPING\""
+                    },
+                    "value": "EPING"
+                  }
+                ],
+                "id": 1128,
+                "modifierName": {
+                  "id": 1125,
+                  "name": "TokenBase",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1104,
+                  "src": "146:9:11"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "146:36:11"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1124,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:11"
+            },
+            "returnParameters": {
+              "id": 1129,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "183:0:11"
+            },
+            "scope": 1132,
+            "src": "132:53:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1133,
+        "src": "96:92:11"
+      }
+    ],
+    "src": "40:150:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {
+    "3": {
+      "events": {
+        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event"
+        },
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x0c19e21c4f7036f195a98877d092327c6e69b9a4",
+      "transactionHash": "0x694fe9db69f35fec88dd8890f7d19fb04a2657d2ef3dba2af2e1658695d2ec48"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-08-27T10:31:46.380Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "allowance(address,address)": {
+        "details": "See {IERC20-allowance}."
+      },
+      "approve(address,uint256)": {
+        "details": "See {IERC20-approve}. Requirements: - `spender` cannot be the zero address."
+      },
+      "balanceOf(address)": {
+        "details": "See {IERC20-balanceOf}."
+      },
+      "decimals()": {
+        "details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5.05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless this function is overridden; NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
+      },
+      "decreaseAllowance(address,uint256)": {
+        "details": "Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`."
+      },
+      "increaseAllowance(address,uint256)": {
+        "details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
+      },
+      "name()": {
+        "details": "Returns the name of the token."
+      },
+      "symbol()": {
+        "details": "Returns the symbol of the token, usually a shorter version of the name."
+      },
+      "totalSupply()": {
+        "details": "See {IERC20-totalSupply}."
+      },
+      "transfer(address,uint256)": {
+        "details": "See {IERC20-transfer}. Requirements: - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`."
+      },
+      "transferFrom(address,address,uint256)": {
+        "details": "See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20}. Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
